@@ -1,4 +1,4 @@
-# Changelog for `advent-of-code`
+# Changelog for `Advent-of-Haskell`
 
 All notable changes to this project will be documented in this file.
 
