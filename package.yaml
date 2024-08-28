@@ -39,7 +39,7 @@ library:
 executables:
   Advent-of-Haskell-exe:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         app, src
     ghc-options:
     - -threaded
     - -rtsopts
@@ -57,3 +57,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - Advent-of-Haskell
+    - hspec
+    - text

@@ -25,6 +25,7 @@ source-repository head
 
 library
   exposed-modules:
+      Day1
       Lib
   other-modules:
       Paths_Advent_of_Haskell
@@ -44,7 +45,7 @@ executable Advent-of-Haskell-exe
   autogen-modules:
       Paths_Advent_of_Haskell
   hs-source-dirs:
-      app
+      app, src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       Advent-of-Haskell
@@ -55,6 +56,7 @@ test-suite Advent-of-Haskell-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      Day1Spec
       Paths_Advent_of_Haskell
   autogen-modules:
       Paths_Advent_of_Haskell
@@ -64,4 +66,6 @@ test-suite Advent-of-Haskell-test
   build-depends:
       Advent-of-Haskell
     , base >=4.7 && <5
+    , hspec
+    , text
   default-language: Haskell2010

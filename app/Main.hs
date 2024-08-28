@@ -1,6 +1,7 @@
 module Main (main) where
 
-import Lib
+-- import           Day1 (part1)
 
 main :: IO ()
-main = someFunc
+main = putStrLn "someFunc"
+

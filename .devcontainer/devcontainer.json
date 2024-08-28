@@ -13,7 +13,7 @@
 			"adjustBash": true,
 			"ghcVersion": "recommended",
 			"cabalVersion": "recommended",
-			"globalPackages": "hlint haskell-dap ghci-dap haskell-debug-adapter stylish-haskell hoogle"
+			"globalPackages": "hlint haskell-dap ghci-dap haskell-debug-adapter stylish-haskell hoogle Hspec"
 		}
 	},
 	"customizations": {
