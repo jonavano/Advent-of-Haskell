@@ -21,6 +21,9 @@ description:         Please see the README on GitHub at <https://github.com/jona
 
 dependencies:
 - base >= 4.7 && < 5
+- split
+- text
+- containers
 
 ghc-options:
 - -Wall
@@ -39,23 +42,27 @@ library:
 executables:
   Advent-of-Haskell-exe:
     main:                Main.hs
-    source-dirs:         app, src
+    source-dirs:         app
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
     - Advent-of-Haskell
+    - split
+    - text
 
 tests:
   Advent-of-Haskell-test:
-    main:                Spec.hs
+    main:                Main.hs
     source-dirs:         test
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -Werror
     dependencies:
     - Advent-of-Haskell
     - hspec
+    - split
     - text

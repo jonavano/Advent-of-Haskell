@@ -26,6 +26,10 @@ source-repository head
 library
   exposed-modules:
       Day1
+      Day2
+      Day3
+      Day4
+      Day5
       Lib
   other-modules:
       Paths_Advent_of_Haskell
@@ -36,6 +40,9 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , containers
+    , split
+    , text
   default-language: Haskell2010
 
 executable Advent-of-Haskell-exe
@@ -45,27 +52,36 @@ executable Advent-of-Haskell-exe
   autogen-modules:
       Paths_Advent_of_Haskell
   hs-source-dirs:
-      app, src
+      app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       Advent-of-Haskell
     , base >=4.7 && <5
+    , containers
+    , split
+    , text
   default-language: Haskell2010
 
 test-suite Advent-of-Haskell-test
   type: exitcode-stdio-1.0
-  main-is: Spec.hs
+  main-is: Main.hs
   other-modules:
       Day1Spec
+      Day2Spec
+      Day3Spec
+      Day4Spec
+      Day5Spec
       Paths_Advent_of_Haskell
   autogen-modules:
       Paths_Advent_of_Haskell
   hs-source-dirs:
       test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N -Werror
   build-depends:
       Advent-of-Haskell
     , base >=4.7 && <5
+    , containers
     , hspec
+    , split
     , text
   default-language: Haskell2010
