@@ -83,7 +83,6 @@ part2 xs = sum $ map product $ filter (\n -> length n == 2 ) allDigitsCombined--
     allSpacesNextSymbol = map (getNeighbors (xLength, yLength)) symbols
     allDigitsNextSymbol = nub $ map (checkForDigit coord) allSpacesNextSymbol
     allDigitsCombined = map (map (\(string, _, _) -> read string :: Int ) . combineDigits . sortBy compareTupleInts) allDigitsNextSymbol
-      --  map (\(string, _, _) -> read string :: Int ) $ combineDigits $ sortBy compareTupleInts allDigitsNextSymbol
 
 filterGear :: [[(Char, Int, Int)]] -> [(Char, Int, Int)]
 filterGear = concatMap ( filter (\(a, _, _) -> a == '*'))

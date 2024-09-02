@@ -30,6 +30,8 @@ library
       Day3
       Day4
       Day5
+      Day6
+      Day7
       Lib
   other-modules:
       Paths_Advent_of_Haskell
@@ -71,6 +73,8 @@ test-suite Advent-of-Haskell-test
       Day3Spec
       Day4Spec
       Day5Spec
+      Day6Spec
+      Day7Spec
       Paths_Advent_of_Haskell
   autogen-modules:
       Paths_Advent_of_Haskell
