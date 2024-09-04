@@ -8,11 +8,24 @@ import qualified Day4
 import qualified Day5
 import qualified Day6
 import qualified Day7
+import qualified Day8
 
 main :: IO ()
 main = do 
-    day7
+    day8
 
+
+
+
+day8 = do 
+    contents <- readFile "/workspaces/Advent-of-Haskell/Puzzles/Day8.txt"
+    let splitIntoLines = lines contents
+    let result = Day8.part1 splitIntoLines 
+    let result2 = Day8.part2 splitIntoLines
+    print "part 1"
+    print result
+    print "part 2"
+    print result2
 
 day7 = do 
     contents <- readFile "/workspaces/Advent-of-Haskell/Puzzles/Day7.txt"
